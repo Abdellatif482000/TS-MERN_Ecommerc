@@ -1,0 +1,37 @@
+.formStyle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #222;
+    padding: 15px;
+    color: #fff;
+}
+
+.goHome {
+    border: 1px #00ff55 solid;
+}
+
+.input {
+    margin-top: 20px;
+    border: none;
+    border-bottom: 2px #fff solid;
+    background-color: #222;
+    color: #fff;
+}
+
+.submitBtn {
+    background-color: bisque;
+    margin-top: 20px;
+}
+
+.label {
+    display: flex;
+    flex-direction: row;
+}
+
+.tooltip {
+    background-color: red;
+}

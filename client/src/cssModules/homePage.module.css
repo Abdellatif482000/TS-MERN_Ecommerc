@@ -1,0 +1,123 @@
+.logo {
+    color: #fff;
+    margin-left: 5px;
+}
+
+.navBar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #222;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+}
+
+.navBarBtns {
+    margin-right: 15px;
+}
+
+.navBarBtns button {
+    margin: 2px;
+}
+
+.homeContainer {
+    position: absolute;
+    top: 6%;
+    left: 9%;
+    /* margin: auto; */
+    margin-top: 20px;
+
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    /* background-color: #111; */
+    /* padding: 10px 20px 0 20px; */
+}
+
+.firstWrapper {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between;   */
+    height: 350px;
+}
+
+.bbADS {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    overflow: hidden;
+}
+
+.categories {
+    height: 350px;
+    width: 30%;
+    margin-left: 5px;
+    /* border: 1px red solid; */
+}
+
+.section {
+    /* background-color: #000; */
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.sectionContent {
+    /* background-color: #333; */
+    width: 100%;
+    height: 320px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: all 1s ease;
+    position: relative;
+}
+
+.sectionHead {
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.brandsContent {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 500px;
+}
+
+.footer {
+    position: absolute;
+    bottom: -20%;
+    left: -12%;
+    width: 126%;
+    background-color: #fff;
+    padding: 20px;
+    color: #000;
+
+}
+
+.socialLinks {
+    display: flex;
+    flex-direction: row;
+}
+
+.socialLinks i {
+    padding: 5px;
+    color: #000;
+}
