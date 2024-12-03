@@ -1,20 +1,36 @@
 import { Router } from "express";
 
 // ----------------------------
-import CartClass from "../controllers/cart.controller";
+import CartController from "../controllers/cart.controller";
 import VerifyClass from "../middelware/verifications.middelware";
 // ----------------------------
 
 const cartRoutes = Router();
 
-cartRoutes.post("/addToCart", VerifyClass.verifyToken, CartClass.addToCart);
-// cartRoutes.put("/changeAmount", VerifyClass.verifyToken, changeAmount);
-// cartRoutes.get("/getCart", VerifyClass.verifyToken, getCart);
-// cartRoutes.put(
-// "/deleteProductFromCart",
-// VerifyClass.verifyToken,
-// deleteProductFromCart
-// );
-// cartRoutes.put("/clearCart", VerifyClass.verifyToken, clearCart);
+cartRoutes.post(
+  "/cart/addToCart",
+  VerifyClass.verifyToken,
+  CartController.addToCart
+);
+cartRoutes.put(
+  "/cart/changeAmount",
+  VerifyClass.verifyToken,
+  CartController.changeAmount
+);
+cartRoutes.get(
+  "/cart/getCart",
+  VerifyClass.verifyToken,
+  CartController.getCart
+);
+cartRoutes.put(
+  "/cart/clearCart",
+  VerifyClass.verifyToken,
+  CartController.clearCart
+);
+cartRoutes.put(
+  "/cart/deleteProductFromCart",
+  VerifyClass.verifyToken,
+  CartController.deleteProduct
+);
 
 export default cartRoutes;
