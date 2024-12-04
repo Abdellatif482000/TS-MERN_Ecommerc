@@ -55,7 +55,7 @@ class CartServices {
       // ---- new item ----
       const newItem: CartItem = {
         productId: prodID,
-        productDetails: targetProduct,
+        productName: targetProduct.productName,
         totalAmount: 1,
         productTotalPrice: targetProduct.price * 1,
       };
@@ -179,7 +179,7 @@ class CartServices {
     // ----- pull item from cart -------
     if (itemInCart) {
       await CartModel.updateOne(
-        { _id: targetCart._id },
+        { id: targetCart.id },
         { $pull: { items: { productId: prodID } } }
       );
       // ---- return item to invnetory ----

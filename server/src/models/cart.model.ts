@@ -5,7 +5,7 @@ const cartSchema: mongoose.Schema = new mongoose.Schema({
   items: [
     {
       productId: { type: String },
-      productDetails: { type: Object },
+      productName: { type: Object },
       totalAmount: { type: Number, default: 1 },
       productTotalPrice: { type: Number, default: 1 },
     },

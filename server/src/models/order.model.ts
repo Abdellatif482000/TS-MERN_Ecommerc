@@ -10,36 +10,12 @@ const orderSchema: mongoose.Schema = new mongoose.Schema({
       },
       cartSummary: { type: Array },
       shippingAddress: { type: String },
-      phoneNum: { type: Number },
+      phoneNum: { type: mongoose.Schema.Types.Mixed },
       paymentMethod: {
         type: String,
-        // validate: {
-        //   validator: function (value: any) {
-        //     const allowedValues = ["cashOnDelivery", "payByCard", "fawryPay"];
-        //     return allowedValues.includes(value);
-        //   },
-        //   message: (props: any) =>
-        //     `${props.value} is not a valid status! Only "cashOnDelivery", "payByCard", "fawryPay" are allowed.`,
-        // },
       },
       orderStatus: {
         type: String,
-        // validate: {
-        //   validator: function (value: any) {
-        //     const allowedValues = [
-        //       "pending",
-        //       "processing",
-        //       "shipped",
-        //       "delivered",
-        //     ];
-        //     return allowedValues.includes(value);
-        //   },
-        //   message: (props: any) =>
-        //     `${props.value} is not a valid status! Only "pending",
-        //       "processing",
-        //       "shipped",
-        //       "delivered", are allowed.`,
-        // },
       },
       totalPrice: { type: Number },
     },

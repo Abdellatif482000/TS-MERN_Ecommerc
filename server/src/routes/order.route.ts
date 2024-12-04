@@ -13,13 +13,23 @@ orderRoutes.post(
   VerifyClass.verifyToken,
   OrderController.checkout
 );
-// orderRoutes.get("/order/getOrders", VerifyClass.verifyToken, getOrders);
-// orderRoutes.post(
-//   "/order/manageOrderStatus",
-//   VerifyClass.verifyToken,
-//   // VerifyClass.verifyRoleAdmin,
-//   manageOrderStatus
-// );
+orderRoutes.get(
+  "/order/getOrders",
+  VerifyClass.verifyToken,
+  OrderController.getOrders
+);
+orderRoutes.post(
+  "/order/manageOrderStatus",
+  VerifyClass.verifyToken,
+  VerifyClass.verifyRole("admin"),
+  OrderController.manageOrderStatus
+);
+orderRoutes.get(
+  "/order/filterByStatus",
+  VerifyClass.verifyToken,
+  VerifyClass.verifyRole("admin"),
+  OrderController.filterOrders
+);
 // orderRoutes.put("/deleteProductFromCart", VerifyClass.verifyToken, deleteProductFromCart);
 // orderRoutes.put("/clearCart", VerifyClass.verifyToken, clearCart);
 

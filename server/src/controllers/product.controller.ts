@@ -78,6 +78,7 @@ class ProductController {
             { $set: { [fieldName]: newValue } },
             { new: true }
           );
+          console.log(updatedProdcut);
           res.status(200).json({
             massege: "Product Updated",
             updatedProdcut: updatedProdcut,

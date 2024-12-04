@@ -30,8 +30,8 @@ class AuthServices {
       const userModel = new customerModel(userData);
 
       // ----------- create new cart and orderlist for user ---------------
-      const cartService = new CartServices(userModel._id as string);
-      const orderService = new OrderServices(userModel._id as string);
+      const cartService = new CartServices(userModel.id as string);
+      const orderService = new OrderServices(userModel as any);
       const cart = await cartService.initCart();
       const orderlist = await orderService.initOrdelist();
 
@@ -67,15 +67,15 @@ class AuthServices {
       foundUser.password
     );
     //--------get cart and orderlist for sessions -----
-    const cartService = new CartServices(foundUser._id as string);
-    const orderService = new OrderServices(foundUser._id as string);
+    const cartService = new CartServices(foundUser.id as string);
+    const orderService = new OrderServices(foundUser);
     const cart = await cartService.getCart();
     const orderlist = await orderService.getOrderlist();
     console.log(orderlist);
     // ------- generate token and init session --------
     if (isPasswordMatch) {
       const token = await AuthHelper.generateToken({
-        userID: foundUser._id,
+        userID: foundUser.id,
       });
       await AuthHelper.setCookiesAndSession(
         req,

@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 export interface CartItem {
   productId: string;
-  productDetails: string;
+  productName: string;
   totalAmount: number;
   productTotalPrice: number;
 }
