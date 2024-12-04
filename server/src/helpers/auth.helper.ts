@@ -34,7 +34,7 @@ class AuthHelper {
       orderlist: role === "user" ? orderlist.orders : "no orderList",
       cart: role === "user" ? cart.items : "no cart",
     };
-    console.log(req.session);
+
     res.cookie("token", token, {
       secure: false,
       httpOnly: false,

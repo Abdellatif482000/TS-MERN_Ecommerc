@@ -60,6 +60,7 @@ class AuthServices {
     if (role === "admin") {
       foundUser = await adminModel.findOne({ email: userData.email });
     }
+    console.log(foundUser);
     // ------ check password -------------
     let isPasswordMatch = await bcrypt.compare(
       userData.password,
